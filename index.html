@@ -23,18 +23,23 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <h1>City Name</h1>
-          <ul>
-            <li>Date and Time</li>
-            <li>Weather</li>
-          </ul>
+          <div class="overview">
+            <h1>City Name</h1>
+            <ul>
+              <li>Date and Time</li>
+              <li>Weather</li>
+            </ul>
+          </div>
           <div class="row">
             <div class="col-6">
-              15°C | °F
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-                alt="cloudy"
-              />
+              <div class="d-flex weather-temperature">
+                <span class="current-temperature">15</span>
+                <span class="units"> °C | <a href="#">°F</a></span>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                  alt="cloudy"
+                />
+              </div>
             </div>
             <div class="col-6">
               <ul>

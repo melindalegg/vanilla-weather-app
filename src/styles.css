@@ -15,6 +15,8 @@ li {
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
+  position: relative;
+  top: 10px;
 }
 
 .weather-app-wrapper {
@@ -30,4 +32,26 @@ li {
   border: 1px solid lightgray;
   border-radius: 15px;
   font-family: "Unbounded", cursive;
+}
+
+.overview {
+  margin-bottom: 20px;
+}
+
+.weather-temperature img {
+  margin-left: 20px;
+  height: 64px;
+  width: 64px;
+}
+
+.units {
+  position: relative;
+  font-size: 16px;
+  top: 10px;
+}
+
+.current-temperature {
+  color: black;
+  font-size: 50px;
+  font-weight: 100px;
 }
