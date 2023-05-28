@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Calistoga&family=Rubik+Vinyl&family=Unbounded:wght@200;300;400;500;600;800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Vanilla Weather App</title>
   </head>
   <body>
@@ -24,16 +25,16 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="overview">
-            <h1>City Name</h1>
+            <h1 id="city"></h1>
             <ul>
-              <li>Date and Time</li>
-              <li>Weather</li>
+              <li id="date-time"></li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
-                <span class="current-temperature">15</span>
+                <span class="current-temperature" id="temperature">15</span>
                 <span class="units"> °C | <a href="#">°F</a></span>
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
@@ -43,9 +44,8 @@
             </div>
             <div class="col-6">
               <ul>
-                <li>Humidity</li>
-                <li>Wind</li>
-                <li>Precipitation</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>km/h</li>
               </ul>
             </div>
           </div>
