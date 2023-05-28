@@ -59,7 +59,17 @@ li:first-letter {
 }
 
 .current-temperature {
-  color: black;
+  color: rgb(33, 33, 33);
   font-size: 50px;
   font-weight: 100px;
+}
+
+.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: rgb(33, 33, 33);
 }
