@@ -73,3 +73,21 @@ li:first-letter {
   text-decoration: none;
   color: rgb(33, 33, 33);
 }
+
+.weather-forecase {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16 px;
+  opacity: 0.8;
+}
+
+.weather-forecast-temperature {
+  font-size: 12px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.8;
+}
