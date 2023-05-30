@@ -21,11 +21,11 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thur"];
+  let days = ["Sun", "Mon", "Tue"];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
@@ -46,7 +46,7 @@ function displayForecast() {
   forecastHTML =
     forecastHTML +
     `              <div class="col-2">
-                <div class="weather-forecast-date">Mon</div>
+                <div class="weather-forecast-date">Wed</div>
                 <img
                   src="https://openweathermap.org/img/wn/10d@2x.png"
                   alt=""
@@ -59,6 +59,12 @@ function displayForecast() {
               </div>`;
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "d47eof23tc4b1a80f28b4ddc9cf18ce6";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric0`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -83,6 +89,8 @@ function displayTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", `response.data.condition.description`);
+
+  getForecast(response.data.coordinates);
 }
 
 function search(city) {
@@ -126,4 +134,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("Auckland");
-displayForecast();
