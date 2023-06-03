@@ -109,16 +109,9 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-search");
   searchCity(cityInputElement.value);
 }
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
-searchCity("Auckland");
-
 function searchLocation(position) {
-  let apiKey = "c7c121768b5bc3767a58491ac0aab1bc9";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+  let apiKey = "d47eof23tc4b1a80f28b4ddc9cf18ce6";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${position.coords.latitude}&lon=${position.coords.longitude}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -129,3 +122,8 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+searchCity("Auckland");
