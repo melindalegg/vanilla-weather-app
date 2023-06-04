@@ -1,3 +1,8 @@
+body {
+  background-image: url("images/sebastian-pena-lambarri-clouds.jpg");
+  background-size: cover;
+}
+
 h1 {
   font-size: 24px;
   font-weight: 100;
@@ -13,7 +18,7 @@ ul {
 li {
   list-style: none;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 19px;
   position: relative;
   top: 10px;
@@ -36,6 +41,12 @@ li:first-letter {
   border: 1px solid lightgray;
   border-radius: 15px;
   font-family: "Unbounded", cursive;
+  background-color: rgb(255, 255, 255, 0.35);
+}
+
+.weather-app:hover {
+  transition-duration: 0.6s;
+  background-color: rgb(242, 242, 210, 1);
 }
 
 .overview {
@@ -90,4 +101,19 @@ li:first-letter {
 
 .weather-forecast-temperature-min {
   opacity: 0.8;
+}
+
+#current-location-button {
+  transition-duration: 0.3s;
+}
+
+#search-button:hover {
+  transition-duration: 0.3s;
+  opacity: 0.9;
+}
+
+.author {
+  position: relative;
+  left: 175px;
+  top: 10px;
 }
